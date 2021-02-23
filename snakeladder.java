@@ -5,7 +5,7 @@ public class snakeladder {
 	static final int Ladder = 1;
 	static final int Snake = 2;
 	static int Sum = 0;
-
+	static int c = 0;
 	
 	public static void main(String[] args) {
 	int die;
@@ -20,6 +20,7 @@ public class snakeladder {
 		int opt = (int) Math.floor(Math.random() * 10) % 3;
 
 		if (opt == Ladder) {
+			if (Sum <= 100 && (Sum + die <= 100))
 			Sum = Sum + die;
 			System.out.println("Ladder");
 }
@@ -34,7 +35,8 @@ else {
 			System.out.println("No play");
 
 }
-
+System.out.println("number of times, the dice was played is "+ c+".");
+System.out.println(Sum);
 }
 
 
