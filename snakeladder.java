@@ -9,6 +9,8 @@ public class snakeladder {
 	
 	public static void main(String[] args) {
 	int die;
+	
+	while (Sum < 100)	{
 	//using random function
 	die=(int)(Math.random()*6) + 1;
 
@@ -22,9 +24,11 @@ public class snakeladder {
 			System.out.println("Ladder");
 }
 		else if (opt == Snake) {
-
+			
+			if (Sum > 0 && (Sum - die) >=0){
 			Sum = Sum - die;
 			System.out.println("Snake");
+	}
 }
 else {
 			System.out.println("No play");
@@ -36,3 +40,4 @@ else {
 
 }
 
+}
